@@ -112,6 +112,11 @@ class MainActivity : AppCompatActivity() {
             CalendarEvent("Event is 3"),
             CalendarEvent("Event is 4"),
             CalendarEvent("Event is 5"),
+            CalendarEvent("Event is 6"),
+            CalendarEvent("Event is 7"),
+            CalendarEvent("Event is 8"),
+            CalendarEvent("Event is 9"),
+            CalendarEvent("Event is 10"),
         )
 
         val dailyScheduleAdapter = CalendarEventAdapter(R.layout.item_schedule)

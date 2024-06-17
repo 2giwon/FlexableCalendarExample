@@ -40,7 +40,9 @@ class CalendarAdapter(
         val firstOfWeek = current.get(Calendar.DAY_OF_WEEK) - 1
         current.add(Calendar.DAY_OF_MONTH, -firstOfWeek)
 
-        for (i in 0 until 6) {
+
+
+        repeat(6) {
             val weekView = WeekView(binding.root.context).apply {
                 layoutParams = LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
@@ -49,6 +51,7 @@ class CalendarAdapter(
                 )
             }
             val weekStart = current.clone() as Calendar
+            weekView.setCurrentMonth(calendar.get(Calendar.MONTH) + 1)
             weekView.setWeek(weekStart)
             binding.layoutMonth.addView(weekView)
             current.add(Calendar.DAY_OF_MONTH, 7)
